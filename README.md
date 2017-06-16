@@ -20,7 +20,7 @@ test application for displaying video feed using angular 1.* components architec
   - `npm run test`: run all tests (test:unit, test:functional, test:integration, test:e2e).
   - `npm run test:coverage`: run all tests with coverage preprocessor.
 
-  Coverage reports will be under `test/results/{unit,functional,integration,e2e}/coverage/`.
+  Coverage reports will be under `test-results/coverage/`.
 
 ## Other tasks
   - `npm start`: alias for `npm run build:dev`.
