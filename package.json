@@ -3,40 +3,37 @@
   "version": "1.0.0",
   "description": "test application for displaying video feed",
   "scripts": {
-    "setup": "echo 'Nothing to setup'",
-    "start": "npm run build:dev",
-    "build": "npm run build:umd && npm run build:min",
-    "build:dev": "npm run build:umd -- --livereload",
-    "build:umd": "bt build -t js -c webpack.config.js",
-    "build:min": "npm run build:umd -- --min",
-    "clean": "bt clean",
-    "doc": "echo 'doc task not available'",
-    "lint": "bt lint -t js -f \"app/**/*.js\" \"src/**/*.js\" \"*.js\"",
-    "test": "npm run test:unit",
-    "test:unit": "bt test -t unit -s js -w webpack.config.js -c karma.config.js -o test-results",
-    "test:unit:umd": "bt test -t unit -s js -w webpack.config.js -c karma.config.js -o test-results",
-    "test:coverage": "npm run test:coverage:unit",
-    "test:coverage:unit": "npm run test:unit -- --cov"
+    "build": "rimraf dist && webpack --bail --progress --profile",
+    "server": "webpack-dev-server --history-api-fallback --inline --progress",
+    "test": "karma start",
+    "start": "npm run server"
   },
-  "keywords": ["video", "feed", "media"],
+  "keywords": [
+    "video",
+    "feed",
+    "media"
+  ],
   "author": {
     "name": "vira-lytvyn",
     "email": "baterfluy@gmail.com"
   },
   "license": "MIT",
+  "dependencies": {
+    "angular": "^1.6.4"
+  },
   "devDependencies": {
     "angular-mocks": "^1.6.4",
-    "build-tool": "0.0.1",
     "css-loader": "^0.28.4",
     "extract-text-webpack-plugin": "^2.1.2",
     "html-loader": "^0.4.5",
+    "karma": "^1.7.0",
     "karma-spec-reporter": "0.0.31",
     "less": "^2.7.2",
     "less-loader": "^4.0.4",
     "ng-annotate-loader": "^0.6.1",
-    "style-loader": "^0.18.2"
-  },
-  "dependencies": {
-    "angular": "^1.6.4"
+    "rimraf": "^2.6.1",
+    "style-loader": "^0.18.2",
+    "webpack": "^2.6.1",
+    "webpack-dev-server": "^2.4.5"
   }
 }

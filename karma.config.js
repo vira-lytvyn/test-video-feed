@@ -14,7 +14,7 @@ module.exports = function() {
       'node_modules/angular/angular.js',
       'node_modules/angular-mocks/angular-mocks.js',
       `app/**/*.spec.js`
-      `src/**/*.spec.js`
+      `components/**/*.spec.js`
     ],
     exclude: []
   };

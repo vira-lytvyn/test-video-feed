@@ -1,10 +1,10 @@
 const webpack = require('webpack'),
   ExtractTextPlugin = require('extract-text-webpack-plugin'),
-  pkg = require('../package.json');
+  pkg = require('package.json');
 
 module.exports = (options) => ({
   entry: {
-    [pkg.name]: './src/video-feed.component.js'
+    [pkg.name]: './component/video-feed.component.js'
   },
   externals: {
     'angular': 'angular'

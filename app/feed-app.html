@@ -1,10 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
+
+<!doctype html>
+<html ng-app="feedApp">
+
 <head>
-	<meta charset="UTF-8">
-	<title>Document</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+
+  <script src="../dist/video-item.js"></script>
+  <script src="./feed-app.js"></script>
+
+  <link rel="stylesheet" href="../dist/video-item.css" />
 </head>
+
 <body>
-	
+  <h2>video-item</h2>
+  <div ng-controller="feedController as feed">
+    <div class="medium">
+      <video-item
+        card-title="feed.data.cardTitle"
+        views="feed.data.views"
+        video="feed.data.video">
+      </video-item>
+    </div>
+  </div>
 </body>
+
 </html>
