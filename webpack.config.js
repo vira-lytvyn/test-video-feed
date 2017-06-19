@@ -4,7 +4,7 @@ const webpack = require('webpack'),
 
 module.exports = (options) => ({
   entry: {
-    [pkg.name]: './component/video-feed.component.js'
+    [pkg.name]: './app/app.js'
   },
   externals: {
     'angular': 'angular'

@@ -9,3 +9,6 @@ test application for displaying video feed using angular 1.* components architec
 
 ## Install
   Before doing anything, run `npm i`.
+
+## Run up
+  Use `npm start` to run development server

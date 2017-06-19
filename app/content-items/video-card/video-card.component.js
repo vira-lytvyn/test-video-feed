@@ -1,6 +1,6 @@
 require('./video-card.less');
 
-angular.module('video-item')
+angular.module('content-items')
 .component('videoCard', {
   template: require('./video-card.html'),
   bindings: {
